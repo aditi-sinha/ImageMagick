@@ -4,7 +4,9 @@ HOME_PATH=$(pwd)
 PKG_NAME=ImageMagick-libs
 
 cd ..
-make distclean
+if [ -f "Makefile"] then
+	make distclean
+fi
 ./configure
 make clean
 make -j
